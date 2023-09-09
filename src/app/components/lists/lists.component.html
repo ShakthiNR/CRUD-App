@@ -1,3 +1,26 @@
-<div>
-    list
+<div *ngIf="todos.length ===0; else listBlock">
+    No Task Found, Please add some tasks
 </div>
+
+<ng-template #listBlock>
+    <div>
+        <div>Task Lists</div>
+        <div>
+            {{todos.length > 0 && (todos.length)}}
+        </div>
+        <div *ngFor="let todo of todos" class="flex gap-5">
+            <div>
+                <div>
+                    {{todo.taskName}}
+                </div>
+                <div>
+                    {{todo.deadline}}
+                </div>
+            </div>
+
+            <div class="self-center">
+                <button (click)="deleteTodo(todo.id)">Delete</button>
+            </div>
+        </div>
+    </div>
+</ng-template>

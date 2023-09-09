@@ -1,8 +1,8 @@
 <div class="flex gap-2">
-    <div>App Title</div>
+    <div>{{ appTitle }}</div>
     <div *ngIf="hasRoute('/')">
         <app-button 
-            [isAddTask]="isAddTask" 
+            [btnName]="isAddTask ? 'Add Task' :'Close'" 
             [btnClass]="btnClass" 
             (btnEventEmitter)="handleBtnClick()"
             >

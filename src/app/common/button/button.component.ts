@@ -4,12 +4,10 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 @Component({
     selector: 'app-button',
     templateUrl: "./button.component.html",
-    styles: [""]
 })
 export class ButtonComponent {
 
-
-    @Input() isAddTask !: boolean
+    @Input() btnName!:string
     @Input() btnClass !: string
     @Output() btnEventEmitter = new EventEmitter()
 
