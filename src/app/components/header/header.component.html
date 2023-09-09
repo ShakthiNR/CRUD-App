@@ -1,1 +1,11 @@
-<p>header works!</p>
+<div class="flex gap-2">
+    <div>App Title</div>
+    <div *ngIf="hasRoute('/')">
+        <app-button 
+            [isAddTask]="isAddTask" 
+            [btnClass]="btnClass" 
+            (btnEventEmitter)="handleBtnClick()"
+            >
+        </app-button>
+    </div>
+</div>

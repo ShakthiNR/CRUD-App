@@ -9,16 +9,18 @@ import { ListsComponent } from './components/lists/lists.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormComponent } from './components/form/Form.component';
 import { ButtonComponent } from './common/button/button.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     HeaderComponent,
     AboutComponent,
     ListsComponent,
     FooterComponent,
     FormComponent,
-    ButtonComponent
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
