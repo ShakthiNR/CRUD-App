@@ -1,27 +1,35 @@
-<form (ngSubmit)="handleSubmit()" [formGroup]="addTaskForm" class="border-2 border-green-500 ">
+
+
+<form (ngSubmit)="handleSubmit()" [formGroup]="addTaskForm" class="mt-2">
     <div class="flex flex-col h-12">
         <div>
-            <input type="text" class={{formInputStyle}} formControlName="taskName" />
+            <label>Task</label>
+            <input type="text" class={{formInputStyle}} formControlName="taskName" placeholder="Task Description"  />
         </div>
-        <div class="text-xs" *ngIf="addTaskForm.get('taskName')?.hasError('required') && addTaskForm.get('taskName')?.touched">
+        <div class="text-xs text-red-500 font-bold" *ngIf="addTaskForm.get('taskName')?.hasError('required') && addTaskForm.get('taskName')?.touched">
              Task name is required 
         </div>
     </div>
 
 
-    <div class="flex flex-col h-14">
+    <div class="flex flex-col h-14 mt-6 mb-6">
         <div>
-            <input type="date" class={{formInputStyle}} formControlName="deadline" />
-
+            <label>Deadline</label>
+            <input placeholder="Deadline" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"   class={{formInputStyle}} formControlName="deadline" />
         </div>
 
-        <div  class="text-xs" *ngIf="addTaskForm.get('deadline')?.hasError('required') && addTaskForm.get('deadline')?.touched">
+        <div  class="text-xs text-red-500 font-bold" *ngIf="addTaskForm.get('deadline')?.hasError('required') && addTaskForm.get('deadline')?.touched">
              Task deadline is required 
         </div>
     </div>
 
 
     <div>
-        <input class={{submitBtnStyle}} type="submit" value="Submit" [disabled]="addTaskForm.invalid" />
+        <input 
+        type="submit" value="Submit" 
+        [disabled]="addTaskForm.invalid"
+        [ngClass]="getSubmitBtnStyle(addTaskForm.invalid)"
+         />
     </div>
+
 </form>

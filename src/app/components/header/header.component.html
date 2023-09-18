@@ -1,5 +1,5 @@
-<div class="flex gap-2">
-    <div>{{ appTitle }}</div>
+<div class="flex justify-between">
+    <div class="text-2xl font-bold">{{ appTitle }}</div>
     <div *ngIf="hasRoute('/')">
         <app-button 
             [btnName]="isAddTask ? 'Add Task' :'Close'" 

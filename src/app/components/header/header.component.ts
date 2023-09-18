@@ -9,7 +9,7 @@ import {  Router } from '@angular/router';
 export class HeaderComponent {
 
     isAddTask!: boolean
-    appTitle:string = "Ng Todo"
+    appTitle:string = "Ng Task Tracker";
 
     constructor(private todoService: TodoService, private _router: Router) {
         this.todoService.btnEvnt.subscribe((value) => {
@@ -23,7 +23,7 @@ export class HeaderComponent {
 
     get btnClass(): string {
         if (this.isAddTask)
-            return "bg-green-500 text-white px-[5px] py-[2px]"
+            return "bg-[#4f46e5] text-white px-[5px] py-[2px]"
         else
             return "bg-red-500 text-white px-[5px] py-[2px]"
     }

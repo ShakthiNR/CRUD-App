@@ -1,25 +1,21 @@
-<div *ngIf="todos.length ===0; else listBlock">
-    No Task Found, Please add some tasks
+<div *ngIf="todos.length ===0; else listBlock" class="text-center m-2">
+    No Task! Add some tasks
 </div>
 
 <ng-template #listBlock>
-    <div>
-        <div>Task Lists</div>
-        <div>
-            {{todos.length > 0 && (todos.length)}}
-        </div>
-        <div *ngFor="let todo of todos" class="flex gap-5">
+    <div class="mt-5">
+        <div *ngFor="let todo of todos" class="flex justify-between bg-gray-300 p-2 mb-3 border-l-[4px] border-green-500">
             <div>
-                <div>
+                <div class="font-semibold">
                     {{todo.taskName}}
                 </div>
                 <div>
-                    {{todo.deadline}}
+                    {{todo.deadline  |  date:'d MMMM, y'}}
                 </div>
             </div>
 
-            <div class="self-center">
-                <button (click)="deleteTodo(todo.id)">Delete</button>
+            <div class="self-center text-red-500 font-semibold mr-5">
+                <button (click)="deleteTodo(todo.id)">X</button>
             </div>
         </div>
     </div>
