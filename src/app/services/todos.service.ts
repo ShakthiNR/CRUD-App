@@ -7,7 +7,7 @@ import { ITodos } from "../common/helper/types";
 })
 export class TodoService {
 
-    isToggle: boolean = false;
+    isToggle: boolean = true;
     todos: ITodos[] = []
     hasTodos = JSON.parse(localStorage.getItem("snr-ng-todos") as string)
 

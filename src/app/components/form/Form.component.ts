@@ -9,9 +9,9 @@ import { FormBuilder, FormGroup, FormControl, Validators } from "@angular/forms"
 export class FormComponent implements OnInit {
 
     addTaskForm: FormGroup = new FormGroup({});
-    formInputStyle:string = "border-slate-500 border-[1px] py-[1px] px-[5px] w-[100%]"
+    formInputStyle:string = "focus:outline-none focus:ring-1 text-base focus:ring-indigo-300 border-slate-500 border-[1px] py-[1px] px-[5px] w-[100%]"
     submitBtnStyle:string = "py-[1px] px-[5px] cursor-pointer w-[100%] border-[1px] border-black bg-black text-white"
-    disabledSubmitBtnStyle:string = "py-[1px] px-[5px] cursor-pointer w-[100%]  bg-gray-500 text-white"
+    disabledSubmitBtnStyle:string = "py-[1px] px-[5px] w-[100%]  bg-zinc-400 text-zinc-500"
 
     constructor(private formBuilder: FormBuilder, private todoServices:TodoService) {
      }

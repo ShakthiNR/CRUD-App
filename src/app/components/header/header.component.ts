@@ -23,9 +23,9 @@ export class HeaderComponent {
 
     get btnClass(): string {
         if (this.isAddTask)
-            return "bg-[#4f46e5] text-white px-[5px] py-[2px]"
+            return "bg-[#6d28d9] text-sm text-white px-[5px] py-[5px]"
         else
-            return "bg-red-500 text-white px-[5px] py-[2px]"
+            return "bg-red-500 text-sm text-white px-[5px] py-[5px]"
     }
 
 
