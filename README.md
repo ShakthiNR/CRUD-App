@@ -9,6 +9,6 @@ https://angular-taskify.netlify.app/
 Angular V16, Tailwind CSS
 
 ## Sketch 
-<img src="src/assets/Image1.jpg" width="200" height="200">
+![Getting Started](src/assets/Image1.jpg)
 
-<img src="src/assets/Image2.jpg" width="200" height="200">
+![Getting Started](src/assets/Image2.jpg)
